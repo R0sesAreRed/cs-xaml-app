@@ -1,0 +1,40 @@
+﻿@using MooBookopedia.Models;
+@model Movies
+
+@{
+    ViewData["Title"] = Model.MovieName;
+}
+
+<h1 >
+    @Model.MovieName (@Model.Year)
+</h1>
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <h3>
+            Reżyser
+        </h3>
+        <hr />
+        <p>
+            @Model.Director
+        </p>
+        <h3>
+            Aktorzy
+        </h3>
+        <hr />
+        <p>
+            @Model.Actors
+        </p>
+    </div>
+    <div class="col-md-2">
+        <img src="@Model.MoviePictureURL" class="img-fluid" runat="server" alt="@Model.MovieName" />
+        <p class="text-center border border-primary mb-0">@Model.MovieName</p>
+    </div>
+</div>
+<h3>
+    Opis filmu
+</h3>
+<hr />
+<p>
+@Model.MovieDescription
+</p>
